@@ -1,0 +1,29 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Programmer {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Query {
+  programmers: [Programmer!]!
+  programmer(id: String!): Programmer!
+}
+
+type Mutation {
+  create(data: CreateProgrammerDTO!): Programmer!
+  update(id: String!, data: UpdateProgrammerDTO!): Programmer!
+}
+
+input CreateProgrammerDTO {
+  name: String!
+  email: String!
+}
+
+input UpdateProgrammerDTO {
+  name: String
+  email: String
+}
